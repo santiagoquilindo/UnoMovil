@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Car, MapPin, Search } from 'lucide-react';
+import { CarTaxiFront, MapPin, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
@@ -72,7 +72,7 @@ export function TransportationTab() {
         </div>
         <div className="flex flex-col sm:flex-row gap-2 pt-2">
           <Button type="submit" className="flex-1">
-            <Car className="mr-2 h-4 w-4" />
+            <CarTaxiFront className="mr-2 h-4 w-4" />
             Solicitar Transporte
           </Button>
           <Button type="button" variant="secondary" onClick={handleGetRecommendations} className="flex-1">
