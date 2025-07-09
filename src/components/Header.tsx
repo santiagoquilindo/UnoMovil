@@ -40,7 +40,7 @@ const Logo = () => (
         <text x="0" y="0" className="logo-text-o" textAnchor="middle">ø</text>
     </g>
     <text x="70" y="40" className="logo-text-movil">vil</text>
-    <text x="70" y="55" className="logo-text-tagline">movimiento seguro</text>
+    <text x="95" y="55" className="logo-text-tagline">movimiento seguro</text>
   </svg>
 );
 
