@@ -23,7 +23,7 @@ export function Header() {
           <h1 className="text-xl font-bold tracking-tight">Popayán Go</h1>
         </div>
         <Button asChild variant="ghost" className="rounded-full h-12 w-12 p-0 bg-white hover:bg-gray-100">
-            <a href="https://wa.me/573123456789" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
+            <a href="https://wa.me/573104503898" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
                 <WhatsAppIcon />
                 <span className="sr-only">Contact on WhatsApp</span>
             </a>
