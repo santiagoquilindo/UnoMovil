@@ -23,7 +23,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <main className="flex-grow container mx-auto p-4 md:p-6 lg:p-8">
         <section className="text-center my-8 md:my-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-primary">Tu Ciudad, a tu Manera</h2>
+            <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-primary">Tu Ciudad, a tu Manera</h1>
             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
                 Pide un transporte, envía un paquete o recibe lo que necesites. Uno Móvil te conecta con servicios locales de confianza al instante.
             </p>

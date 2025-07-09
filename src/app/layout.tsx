@@ -2,8 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppButton } from '@/components/WhatsAppButton';
-import { Sidebar, SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
+import { Sidebar, SidebarProvider, SidebarInset, SidebarTrigger } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/AppSidebar';
+import { Button } from '@/components/ui/button';
+import { PanelLeft } from 'lucide-react';
+import { Logo } from '@/components/Logo';
 
 export const metadata: Metadata = {
   title: 'Uno Móvil',
@@ -28,6 +31,17 @@ export default function RootLayout({
             <AppSidebar />
           </Sidebar>
           <SidebarInset>
+             <header className="sticky top-0 z-10 flex h-14 items-center gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+              <SidebarTrigger asChild className="sm:hidden">
+                <Button size="icon" variant="outline">
+                  <PanelLeft className="h-5 w-5" />
+                  <span className="sr-only">Toggle Menu</span>
+                </Button>
+              </SidebarTrigger>
+              <div className="sm:hidden">
+                 <Logo />
+              </div>
+            </header>
             {children}
           </SidebarInset>
         </SidebarProvider>
