@@ -33,6 +33,7 @@ const Logo = () => (
       }
     `}
     </style>
+    <rect width="150" height="60" fill="white"/>
     <text x="0" y="40" className="logo-text-1">1</text>
     <text x="20" y="40" className="logo-text-movil">M</text>
     <g transform="translate(52, 40)">
@@ -46,7 +47,7 @@ const Logo = () => (
 
 export function Header() {
   return (
-    <header className="bg-primary text-primary-foreground shadow-md">
+    <header className="bg-white shadow-md">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
            <Logo />
