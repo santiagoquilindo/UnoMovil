@@ -13,6 +13,7 @@ export function TransportationTab() {
   const [to, setTo] = useState('');
   const [preferences, setPreferences] = useState('');
   const [triggerFetch, setTriggerFetch] = useState(0);
+  const [showForm, setShowForm] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -47,9 +48,22 @@ export function TransportationTab() {
     setTriggerFetch(prev => prev + 1);
   }
 
+  if (!showForm) {
+    return (
+        <div className="flex flex-col items-center justify-center p-8 border-2 border-dashed rounded-lg">
+            <h3 className="text-xl font-semibold mb-4 text-center">¿A dónde te llevamos?</h3>
+            <p className="text-muted-foreground text-center mb-6">Pide un transporte seguro y confiable en minutos.</p>
+            <Button onClick={() => setShowForm(true)} size="lg">
+                <CarTaxiFront className="mr-2 h-5 w-5" />
+                Solicitar Transporte
+            </Button>
+        </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
-      <form onSubmit={handleSubmit} className="space-y-4 p-4 border rounded-lg bg-card shadow-sm">
+      <form onSubmit={handleSubmit} className="space-y-4 p-4 border rounded-lg bg-card shadow-sm animate-in fade-in-50 duration-500">
         <div className="grid md:grid-cols-2 gap-4">
           <div className="space-y-2">
             <Label htmlFor="from">Desde</Label>
@@ -73,7 +87,7 @@ export function TransportationTab() {
         <div className="flex flex-col sm:flex-row gap-2 pt-2">
           <Button type="submit" className="flex-1">
             <CarTaxiFront className="mr-2 h-4 w-4" />
-            Solicitar Transporte
+            Solicitar Transporte por WhatsApp
           </Button>
           <Button type="button" variant="secondary" onClick={handleGetRecommendations} className="flex-1">
             <Search className="mr-2 h-4 w-4" />

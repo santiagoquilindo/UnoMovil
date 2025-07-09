@@ -13,6 +13,7 @@ export function ShoppingTab() {
   const [shoppingList, setShoppingList] = useState('');
   const [preferences, setPreferences] = useState('');
   const [triggerFetch, setTriggerFetch] = useState(0);
+  const [showForm, setShowForm] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -39,9 +40,22 @@ export function ShoppingTab() {
     setTriggerFetch(prev => prev + 1);
   }
 
+  if (!showForm) {
+    return (
+        <div className="flex flex-col items-center justify-center p-8 border-2 border-dashed rounded-lg">
+            <h3 className="text-xl font-semibold mb-4 text-center">¿Necesitas hacer compras?</h3>
+            <p className="text-muted-foreground text-center mb-6">Nosotros compramos por ti y te lo llevamos a casa.</p>
+            <Button onClick={() => setShowForm(true)} size="lg">
+                <ShoppingCart className="mr-2 h-5 w-5" />
+                Solicitar Compra
+            </Button>
+        </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
-      <form onSubmit={handleSubmit} className="space-y-4 p-4 border rounded-lg bg-card shadow-sm">
+      <form onSubmit={handleSubmit} className="space-y-4 p-4 border rounded-lg bg-card shadow-sm animate-in fade-in-50 duration-500">
         <div className="space-y-2">
           <Label htmlFor="store">Tienda</Label>
           <div className="relative">
@@ -60,7 +74,7 @@ export function ShoppingTab() {
         <div className="flex flex-col sm:flex-row gap-2 pt-2">
           <Button type="submit" className="flex-1">
             <ShoppingCart className="mr-2 h-4 w-4" />
-            Solicitar Compra
+            Solicitar Compra por WhatsApp
           </Button>
           <Button type="button" variant="secondary" onClick={handleGetRecommendations} className="flex-1">
             <Search className="mr-2 h-4 w-4" />
