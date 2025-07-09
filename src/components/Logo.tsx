@@ -8,6 +8,7 @@ export const Logo = () => (
     viewBox="0 0 160 65"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="text-foreground"
   >
     <style>
       {`
@@ -19,7 +20,7 @@ export const Logo = () => (
         .logo-text-movil {
           font-family: 'Kalam', cursive;
           font-size: 38px;
-          fill: black;
+          fill: currentColor;
         }
         .logo-text-o {
           font-family: 'Kalam', cursive;
@@ -29,11 +30,10 @@ export const Logo = () => (
         .logo-text-tagline {
           font-family: 'Kalam', cursive;
           font-size: 12px;
-          fill: black;
+          fill: currentColor;
         }
       `}
     </style>
-    <rect width="160" height="65" fill="white"/>
     <text x="5" y="40" className="logo-text-1">1</text>
     <text x="25" y="40" className="logo-text-movil">M</text>
     <g transform="translate(57, 40)">
