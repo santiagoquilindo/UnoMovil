@@ -10,15 +10,24 @@ export function ServiceTabs() {
   return (
     <Tabs defaultValue="transportation" className="w-full max-w-4xl mx-auto">
       <TabsList className="grid w-full grid-cols-3 bg-primary/10 p-1 h-auto">
-        <TabsTrigger value="transportation" className="text-xs sm:text-sm data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-lg h-12 hover:bg-red-500 hover:text-white transition-colors duration-200">
+        <TabsTrigger 
+          value="transportation" 
+          className="text-xs sm:text-sm data-[state=active]:bg-red-500 data-[state=active]:text-white data-[state=active]:shadow-lg h-12 hover:bg-black hover:text-white transition-colors duration-200"
+        >
           <CarTaxiFront className="mr-2 h-5 w-5" />
           Transporte
         </TabsTrigger>
-        <TabsTrigger value="deliveries" className="text-xs sm:text-sm data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-lg h-12 hover:bg-red-500 hover:text-white transition-colors duration-200">
+        <TabsTrigger 
+          value="deliveries" 
+          className="text-xs sm:text-sm data-[state=active]:bg-red-500 data-[state=active]:text-white data-[state=active]:shadow-lg h-12 hover:bg-black hover:text-white transition-colors duration-200"
+        >
           <Package className="mr-2 h-5 w-5" />
           Domicilios
         </TabsTrigger>
-        <TabsTrigger value="shopping" className="text-xs sm:text-sm data-[state=active]:bg-accent data-[state=active]:text-accent-foreground data-[state=active]:shadow-lg h-12 hover:bg-red-500 hover:text-white transition-colors duration-200">
+        <TabsTrigger 
+          value="shopping" 
+          className="text-xs sm:text-sm data-[state=active]:bg-red-500 data-[state=active]:text-white data-[state=active]:shadow-lg h-12 hover:bg-black hover:text-white transition-colors duration-200"
+        >
           <ShoppingCart className="mr-2 h-5 w-5" />
           Compras
         </TabsTrigger>
