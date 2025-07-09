@@ -19,15 +19,15 @@ export function ShoppingTab() {
     e.preventDefault();
     if (!store || !shoppingList) {
       toast({
-        title: "Incomplete Form",
-        description: "Please specify a store and your shopping list.",
+        title: "Formulario Incompleto",
+        description: "Por favor, especifica una tienda y tu lista de compras.",
         variant: "destructive",
       });
       return;
     }
     toast({
-      title: "Shopping Request Sent!",
-      description: `We're finding someone to shop at ${store} for you.`,
+      title: "¡Solicitud de Compra Enviada!",
+      description: `Estamos buscando a alguien para que compre en ${store} por ti.`,
     });
   }
 
@@ -39,28 +39,28 @@ export function ShoppingTab() {
     <div className="space-y-6">
       <form onSubmit={handleSubmit} className="space-y-4 p-4 border rounded-lg bg-card shadow-sm">
         <div className="space-y-2">
-          <Label htmlFor="store">Store</Label>
+          <Label htmlFor="store">Tienda</Label>
           <div className="relative">
             <Store className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-            <Input id="store" placeholder="e.g., Supermercado Éxito" value={store} onChange={e => setStore(e.target.value)} className="pl-10" />
+            <Input id="store" placeholder="Ej: Supermercado Éxito" value={store} onChange={e => setStore(e.target.value)} className="pl-10" />
           </div>
         </div>
         <div className="space-y-2">
-          <Label htmlFor="shopping-list">Shopping List</Label>
-          <Textarea id="shopping-list" rows={5} placeholder="List the items you need, one per line." value={shoppingList} onChange={e => setShoppingList(e.target.value)} />
+          <Label htmlFor="shopping-list">Lista de Compras</Label>
+          <Textarea id="shopping-list" rows={5} placeholder="Enumera los artículos que necesitas, uno por línea." value={shoppingList} onChange={e => setShoppingList(e.target.value)} />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="shopping-prefs">Preferences (optional)</Label>
-          <Textarea id="shopping-prefs" placeholder="e.g., specific brands, substitute if unavailable..." value={preferences} onChange={e => setPreferences(e.target.value)} />
+          <Label htmlFor="shopping-prefs">Preferencias (opcional)</Label>
+          <Textarea id="shopping-prefs" placeholder="Ej: marcas específicas, sustituir si no está disponible..." value={preferences} onChange={e => setPreferences(e.target.value)} />
         </div>
         <div className="flex flex-col sm:flex-row gap-2 pt-2">
           <Button type="submit" className="flex-1">
             <ShoppingCart className="mr-2 h-4 w-4" />
-            Request Purchase
+            Solicitar Compra
           </Button>
           <Button type="button" variant="secondary" onClick={handleGetRecommendations} className="flex-1">
             <Search className="mr-2 h-4 w-4" />
-            Get Recommendations
+            Obtener Recomendaciones
           </Button>
         </div>
       </form>

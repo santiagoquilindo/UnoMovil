@@ -20,12 +20,12 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
           <Rocket className="h-8 w-8" />
-          <h1 className="text-xl font-bold tracking-tight">Popayán Go</h1>
+          <h1 className="text-xl font-bold tracking-tight">Uno Móvil</h1>
         </div>
         <Button asChild variant="ghost" className="rounded-full h-12 w-12 p-0 bg-white hover:bg-gray-100">
             <a href="https://wa.me/573104503898" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp">
                 <WhatsAppIcon />
-                <span className="sr-only">Contact on WhatsApp</span>
+                <span className="sr-only">Contactar por WhatsApp</span>
             </a>
         </Button>
       </div>

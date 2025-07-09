@@ -25,22 +25,22 @@ export default function Home() {
       <Header />
       <main className="flex-grow container mx-auto p-4 md:p-6 lg:p-8">
         <section className="text-center my-8 md:my-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-primary">Your City, Your Way</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-primary">Tu Ciudad, a tu Manera</h2>
             <p className="mt-2 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Request a ride, send a package, or get anything you need delivered. Popayán Go connects you with trusted local services instantly.
+                Pide un transporte, envía un paquete o recibe lo que necesites. Uno Móvil te conecta con servicios locales de confianza al instante.
             </p>
         </section>
 
         <ServiceTabs />
 
         <section className="mt-16 space-y-12">
-            <PartnersCarousel title="Transportation Partners" partners={transportPartners} />
-            <PartnersCarousel title="Service Allies" partners={serviceAllies} />
+            <PartnersCarousel title="Socios de Transporte" partners={transportPartners} />
+            <PartnersCarousel title="Aliados de Servicios" partners={serviceAllies} />
         </section>
       </main>
       <footer className="bg-muted py-6">
         <div className="container mx-auto text-center text-muted-foreground text-sm">
-            &copy; {new Date().getFullYear()} Popayán Go. All rights reserved.
+            &copy; {new Date().getFullYear()} Uno Móvil. Todos los derechos reservados.
         </div>
       </footer>
     </div>

@@ -48,7 +48,7 @@ export function Recommendations({ requestType, location, preferences, triggerFet
   if (loading) {
     return (
       <div className="mt-6">
-        <h3 className="text-lg font-semibold mb-4 text-primary">Our Top Picks For You</h3>
+        <h3 className="text-lg font-semibold mb-4 text-primary">Nuestras Mejores Opciones para Ti</h3>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {[...Array(3)].map((_, i) => (
             <Card key={i}>
@@ -73,12 +73,12 @@ export function Recommendations({ requestType, location, preferences, triggerFet
   }
 
   if (!data || data.recommendations.length === 0) {
-    return <div className="mt-8 text-center text-muted-foreground p-8 border-2 border-dashed rounded-lg">Click "Get Recommendations" to see our top AI-powered suggestions!</div>;
+    return <div className="mt-8 text-center text-muted-foreground p-8 border-2 border-dashed rounded-lg">¡Haz clic en "Obtener Recomendaciones" para ver nuestras mejores sugerencias con IA!</div>;
   }
 
   return (
     <div className="mt-6 animate-in fade-in-50 duration-500">
-      <h3 className="text-lg font-semibold mb-4 text-primary">Our Top Picks For You</h3>
+      <h3 className="text-lg font-semibold mb-4 text-primary">Nuestras Mejores Opciones para Ti</h3>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {data.recommendations.map((rec, index) => (
           <Card key={index} className="flex flex-col hover:shadow-lg transition-shadow duration-300">
