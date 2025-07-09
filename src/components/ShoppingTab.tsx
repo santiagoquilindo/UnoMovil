@@ -25,10 +25,14 @@ export function ShoppingTab() {
       });
       return;
     }
-    toast({
-      title: "¡Solicitud de Compra Enviada!",
-      description: `Estamos buscando a alguien para que compre en ${store} por ti.`,
-    });
+    
+    let message = `Hola, quiero solicitar una compra.\n\n*Tienda:* ${store}\n\n*Lista de compras:*\n${shoppingList}`;
+    if (preferences) {
+      message += `\n\n*Preferencias:* ${preferences}`;
+    }
+    
+    const whatsappUrl = `https://wa.me/573104503898?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   }
 
   const handleGetRecommendations = () => {

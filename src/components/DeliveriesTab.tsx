@@ -26,10 +26,17 @@ export function DeliveriesTab() {
       });
       return;
     }
-    toast({
-      title: "¡Domicilio Agendado!",
-      description: `El domicilio desde ${pickup} hasta ${dropoff} ha sido programado.`,
-    });
+    
+    let message = `Hola, quiero agendar un domicilio.\n\n*Recogida:* ${pickup}\n*Entrega:* ${dropoff}`;
+    if (details) {
+      message += `\n*Detalles del paquete:* ${details}`;
+    }
+    if (preferences) {
+      message += `\n*Preferencias:* ${preferences}`;
+    }
+    
+    const whatsappUrl = `https://wa.me/573104503898?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   }
 
   const handleGetRecommendations = () => {

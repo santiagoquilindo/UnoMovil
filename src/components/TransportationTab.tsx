@@ -25,10 +25,14 @@ export function TransportationTab() {
       });
       return;
     }
-    toast({
-      title: "¡Transporte Solicitado!",
-      description: `Buscando un transporte desde ${from} hasta ${to}.`,
-    });
+    
+    let message = `Hola, necesito un transporte.\n\n*Desde:* ${from}\n*Hasta:* ${to}`;
+    if (preferences) {
+      message += `\n*Preferencias:* ${preferences}`;
+    }
+
+    const whatsappUrl = `https://wa.me/573104503898?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   }
 
   const handleGetRecommendations = () => {
