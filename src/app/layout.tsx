@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { Sidebar, SidebarProvider, SidebarInset } from '@/components/ui/sidebar';
+import { AppSidebar } from '@/components/AppSidebar';
 
 export const metadata: Metadata = {
   title: 'Uno Móvil',
@@ -21,7 +23,14 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kalam:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased h-full bg-background">
-        {children}
+        <SidebarProvider>
+          <Sidebar>
+            <AppSidebar />
+          </Sidebar>
+          <SidebarInset>
+            {children}
+          </SidebarInset>
+        </SidebarProvider>
         <WhatsAppButton />
         <Toaster />
       </body>
