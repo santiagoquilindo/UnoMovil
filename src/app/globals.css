@@ -101,5 +101,5 @@ body::before {
   right: 0;
   bottom: 0;
   background-color: hsla(var(--background), 0.6);
-  z-index: 0;
+  z-index: -1;
 }
