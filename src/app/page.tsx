@@ -42,19 +42,19 @@ export default function Home() {
       <footer className="bg-muted py-6 mt-auto">
         <div className="container mx-auto text-center text-muted-foreground">
           <div className="flex justify-center items-center space-x-6 mb-4">
-            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-[#1877F2] transition-colors">
               <Facebook className="h-6 w-6" />
               <span className="sr-only">Facebook</span>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-[#E4405F] transition-colors">
               <Instagram className="h-6 w-6" />
               <span className="sr-only">Instagram</span>
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-[#1DA1F2] transition-colors">
               <Twitter className="h-6 w-6" />
               <span className="sr-only">Twitter</span>
             </a>
-            <a href="https://wa.me/573104503898" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            <a href="https://wa.me/573104503898" target="_blank" rel="noopener noreferrer" className="hover:text-[#25D366] transition-colors">
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
