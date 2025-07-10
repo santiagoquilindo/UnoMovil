@@ -14,25 +14,51 @@ Luego, abre tu navegador en [http://localhost:9002](http://localhost:9002) para 
 
 ---
 
-## Cómo subir la aplicación a la nube (Despliegue)
+## Cómo subir la aplicación a la nube (Paso a Paso)
 
-¡Desplegar tu aplicación en la nube es muy fácil con Firebase App Hosting! El proyecto ya está configurado. Solo necesitas seguir estos pasos:
+¡Desplegar tu aplicación en la nube es muy fácil con Firebase App Hosting! El proyecto ya está configurado. Solo necesitas seguir estos pasos detallados:
 
-### 1. Conecta tu proyecto de Firebase
-Si aún no lo has hecho, asegúrate de tener un proyecto de Firebase creado y de haber conectado tu repositorio o entorno local a él.
+### Prerrequisitos
+- **Tener una cuenta de Google:** Necesitarás una para crear un proyecto en Firebase.
+- **Tener Node.js y npm instalados:** Si pudiste ejecutar el proyecto localmente, ya cumples con esto.
 
-### 2. Despliega con un comando
-Una vez que tu proyecto esté conectado, puedes desplegar tu aplicación usando la Firebase CLI (Command Line Interface). Si no la tienes instalada, puedes hacerlo con:
+### Paso 1: Instala la Firebase CLI
+
+Si aún no tienes la Command Line Interface (CLI) de Firebase, ábrela en tu terminal y ejecuta este comando para instalarla de forma global en tu sistema:
+
 ```bash
 npm install -g firebase-tools
 ```
 
-Luego, desde la carpeta de tu proyecto, ejecuta el siguiente comando para desplegar:
+### Paso 2: Inicia sesión en Firebase
+
+Ahora, inicia sesión con tu cuenta de Google en la terminal. Esto abrirá una ventana en tu navegador para que te autentiques:
+
+```bash
+firebase login
+```
+
+### Paso 3: Conecta tu proyecto de Firebase
+
+Si es la primera vez que despliegas este repositorio, necesitarás conectarlo con un proyecto de Firebase. Desde la raíz de tu proyecto, ejecuta:
+
+```bash
+firebase init
+```
+
+Sigue las instrucciones en la pantalla:
+1. Selecciona **"Usar un proyecto existente"** y elige el proyecto que creaste en la [consola de Firebase](https://console.firebase.google.com/).
+2. Cuando te pregunte qué servicios quieres configurar, asegúrate de seleccionar **"App Hosting"**.
+3. Sigue el resto de las instrucciones que te indique la CLI.
+
+### Paso 4: ¡Despliega la aplicación!
+
+Este es el último paso. Con todo configurado, solo tienes que ejecutar el siguiente comando en tu terminal:
 
 ```bash
 firebase deploy --only apphosting
 ```
 
-Este comando tomará tu código, lo construirá en la nube y lo publicará en una URL pública para que todo el mundo pueda verlo.
+Este comando tomará tu código, lo construirá en la nube (instalando dependencias, compilando tu Next.js, etc.) y lo publicará en una URL pública.
 
-¡Y eso es todo! Con estos sencillos pasos, tu aplicación estará en línea.
+¡Y eso es todo! Al finalizar, la terminal te mostrará la URL donde tu aplicación está en línea para que todo el mundo pueda verla.
