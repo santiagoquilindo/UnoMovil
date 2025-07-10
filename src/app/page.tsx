@@ -20,7 +20,7 @@ const serviceAllies = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-transparent">
       <main className="flex-grow container mx-auto p-4 md:p-6 lg:p-8">
         <section className="text-center my-8 md:my-12">
             <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight text-primary">Tu Ciudad, a tu Manera</h1>
