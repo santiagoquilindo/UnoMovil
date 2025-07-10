@@ -1,6 +1,7 @@
 
 import { ServiceTabs } from '@/components/ServiceTabs';
 import { PartnersCarousel } from '@/components/PartnersCarousel';
+import { Facebook, Instagram, Twitter, Phone } from 'lucide-react';
 
 const transportPartners = [
   { name: 'Taxi Veloz', logoUrl: 'https://placehold.co/100x100.png', hint: 'taxi logo' },
@@ -38,8 +39,28 @@ export default function Home() {
             </section>
         </div>
       <footer className="bg-muted py-6 mt-auto">
-        <div className="container mx-auto text-center text-muted-foreground text-sm">
+        <div className="container mx-auto text-center text-muted-foreground">
+          <div className="flex justify-center items-center space-x-6 mb-4">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Facebook className="h-6 w-6" />
+              <span className="sr-only">Facebook</span>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Instagram className="h-6 w-6" />
+              <span className="sr-only">Instagram</span>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <Twitter className="h-6 w-6" />
+              <span className="sr-only">Twitter</span>
+            </a>
+            <a href="tel:+573192057484" className="hover:text-primary transition-colors flex items-center gap-2">
+              <Phone className="h-5 w-5" />
+              <span className="text-sm">319 205 7484</span>
+            </a>
+          </div>
+          <p className="text-sm">
             &copy; {new Date().getFullYear()} Uno Móvil. Todos los derechos reservados.
+          </p>
         </div>
       </footer>
     </div>
