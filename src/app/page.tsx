@@ -6,7 +6,7 @@ import { WhatsAppButton, WhatsAppIcon } from '@/components/WhatsAppButton';
 
 const transportPartners = [
   { name: 'Taxi Veloz', logoUrl: 'https://placehold.co/100x100.png', hint: 'taxi logo' },
-  { name: 'Domi 3', logoUrl: 'https://placehold.co/275x183.png', hint: 'delivery logo' },
+  { name: 'Domi 3', logoUrl: 'https://placehold.co/100x100.png', hint: 'delivery logo' },
   { name: 'Rapido Colectivo', logoUrl: 'https://placehold.co/100x100.png', hint: 'bus logo' },
   { name: 'Auto Amigo', logoUrl: 'https://placehold.co/100x100.png', hint: 'car logo' },
   { name: 'Bici-entrega', logoUrl: 'https://placehold.co/100x100.png', hint: 'bicycle logo' },
