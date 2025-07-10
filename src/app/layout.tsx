@@ -21,8 +21,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kalam:wght@400;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="font-body antialiased h-full bg-background">
-        <header className="sticky top-0 z-10 flex h-16 items-center justify-center border-b bg-background px-4 sm:px-6">
+      <body className="font-body antialiased h-full">
+        <header className="sticky top-0 z-10 flex h-16 items-center justify-center border-b bg-background/80 backdrop-blur-sm px-4 sm:px-6">
             <Logo />
         </header>
         {children}
