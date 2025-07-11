@@ -38,6 +38,15 @@ export function ServiceTabs() {
                 </TabsTrigger>
               </CarouselItem>
               <CarouselItem className="pl-1 basis-auto">
+                 <TabsTrigger 
+                    value="designated-driver" 
+                    className="text-xs sm:text-sm text-muted-foreground data-[state=active]:text-primary data-[state=active]:bg-card data-[state=active]:shadow-md h-12 transition-colors duration-200"
+                  >
+                    <UserCheck className="mr-2 h-5 w-5" />
+                    Conductor Elegido
+                  </TabsTrigger>
+              </CarouselItem>
+              <CarouselItem className="pl-1 basis-auto">
                 <TabsTrigger 
                   value="deliveries" 
                   className="text-xs sm:text-sm text-muted-foreground data-[state=active]:text-primary data-[state=active]:bg-card data-[state=active]:shadow-md h-12 transition-colors duration-200"
@@ -55,15 +64,6 @@ export function ServiceTabs() {
                   Compras
                 </TabsTrigger>
               </CarouselItem>
-              <CarouselItem className="pl-1 basis-auto">
-                 <TabsTrigger 
-                    value="designated-driver" 
-                    className="text-xs sm:text-sm text-muted-foreground data-[state=active]:text-primary data-[state=active]:bg-card data-[state=active]:shadow-md h-12 transition-colors duration-200"
-                  >
-                    <UserCheck className="mr-2 h-5 w-5" />
-                    Conductor Elegido
-                  </TabsTrigger>
-              </CarouselItem>
             </CarouselContent>
             <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 z-10 hidden sm:flex disabled:hidden" />
             <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 z-10 hidden sm:flex disabled:hidden" />
@@ -73,14 +73,14 @@ export function ServiceTabs() {
       <TabsContent value="transportation" className="mt-6">
         <TransportationTab />
       </TabsContent>
+      <TabsContent value="designated-driver" className="mt-6">
+        <DesignatedDriverTab />
+      </TabsContent>
       <TabsContent value="deliveries" className="mt-6">
         <DeliveriesTab />
       </TabsContent>
       <TabsContent value="shopping" className="mt-6">
         <ShoppingTab />
-      </TabsContent>
-       <TabsContent value="designated-driver" className="mt-6">
-        <DesignatedDriverTab />
       </TabsContent>
     </Tabs>
   );
