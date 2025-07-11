@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { ShoppingCart, Store, Search } from 'lucide-react';
+import { ShoppingCart, Store, Search, MapPin } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
@@ -10,6 +10,7 @@ import { useToast } from '@/hooks/use-toast';
 
 export function ShoppingTab() {
   const [store, setStore] = useState('');
+  const [deliveryAddress, setDeliveryAddress] = useState('');
   const [shoppingList, setShoppingList] = useState('');
   const [preferences, setPreferences] = useState('');
   const [triggerFetch, setTriggerFetch] = useState(0);
@@ -18,16 +19,16 @@ export function ShoppingTab() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!store || !shoppingList) {
+    if (!store || !shoppingList || !deliveryAddress) {
       toast({
         title: "Formulario Incompleto",
-        description: "Por favor, especifica una tienda y tu lista de compras.",
+        description: "Por favor, completa la tienda, la dirección de entrega y tu lista de compras.",
         variant: "destructive",
       });
       return;
     }
     
-    let message = `Hola, quiero solicitar una compra.\n\n*Tienda:* ${store}\n\n*Lista de compras:*\n${shoppingList}`;
+    let message = `Hola, quiero solicitar una compra.\n\n*Tienda:* ${store}\n*Dirección de Entrega:* ${deliveryAddress}\n\n*Lista de compras:*\n${shoppingList}`;
     if (preferences) {
       message += `\n\n*Preferencias:* ${preferences}`;
     }
@@ -56,12 +57,21 @@ export function ShoppingTab() {
   return (
     <div className="space-y-6">
       <form onSubmit={handleSubmit} className="space-y-4 p-4 border rounded-lg bg-card shadow-sm animate-in fade-in-50 duration-500">
-        <div className="space-y-2">
-          <Label htmlFor="store">Tienda</Label>
-          <div className="relative">
-            <Store className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-            <Input id="store" placeholder="Ej: Supermercado Éxito" value={store} onChange={e => setStore(e.target.value)} className="pl-10" />
-          </div>
+        <div className="grid md:grid-cols-2 gap-4">
+            <div className="space-y-2">
+            <Label htmlFor="store">Tienda</Label>
+            <div className="relative">
+                <Store className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                <Input id="store" placeholder="Ej: Supermercado Éxito" value={store} onChange={e => setStore(e.target.value)} className="pl-10" />
+            </div>
+            </div>
+             <div className="space-y-2">
+                <Label htmlFor="delivery-address">Dirección de Entrega</Label>
+                <div className="relative">
+                    <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                    <Input id="delivery-address" placeholder="¿A dónde lo llevamos?" value={deliveryAddress} onChange={e => setDeliveryAddress(e.target.value)} className="pl-10" />
+                </div>
+            </div>
         </div>
         <div className="space-y-2">
           <Label htmlFor="shopping-list">Lista de Compras</Label>
@@ -86,6 +96,7 @@ export function ShoppingTab() {
         requestType="shopping"
         preferences={preferences}
         triggerFetch={triggerFetch}
+        location={deliveryAddress}
       />
     </div>
   );
