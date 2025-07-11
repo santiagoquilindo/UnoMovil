@@ -1,11 +1,12 @@
 'use client';
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CarTaxiFront, Package, ShoppingCart, UserCheck } from 'lucide-react';
+import { CarTaxiFront, Package, ShoppingCart, UserCheck, Car } from 'lucide-react';
 import { TransportationTab } from './TransportationTab';
 import { DeliveriesTab } from './DeliveriesTab';
 import { ShoppingTab } from './ShoppingTab';
 import { DesignatedDriverTab } from './DesignatedDriverTab';
+import { VehicleRentalTab } from './VehicleRentalTab';
 import {
   Carousel,
   CarouselContent,
@@ -48,6 +49,15 @@ export function ServiceTabs() {
               </CarouselItem>
               <CarouselItem className="pl-1 basis-auto">
                 <TabsTrigger 
+                  value="vehicle-rental" 
+                  className="text-xs sm:text-sm text-muted-foreground data-[state=active]:text-primary data-[state=active]:bg-card data-[state=active]:shadow-md h-12 transition-colors duration-200"
+                >
+                  <Car className="mr-2 h-5 w-5" />
+                  Alquiler de Vehículos
+                </TabsTrigger>
+              </CarouselItem>
+              <CarouselItem className="pl-1 basis-auto">
+                <TabsTrigger 
                   value="deliveries" 
                   className="text-xs sm:text-sm text-muted-foreground data-[state=active]:text-primary data-[state=active]:bg-card data-[state=active]:shadow-md h-12 transition-colors duration-200"
                 >
@@ -75,6 +85,9 @@ export function ServiceTabs() {
       </TabsContent>
       <TabsContent value="designated-driver" className="mt-6">
         <DesignatedDriverTab />
+      </TabsContent>
+       <TabsContent value="vehicle-rental" className="mt-6">
+        <VehicleRentalTab />
       </TabsContent>
       <TabsContent value="deliveries" className="mt-6">
         <DeliveriesTab />
