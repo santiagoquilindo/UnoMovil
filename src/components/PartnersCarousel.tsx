@@ -11,7 +11,7 @@ import { Card, CardContent } from '@/components/ui/card';
 interface Partner {
   name: string;
   logoUrl: string;
-  hint: string;
+  hint?: string;
 }
 
 interface PartnersCarouselProps {
@@ -22,7 +22,9 @@ interface PartnersCarouselProps {
 export function PartnersCarousel({ title, partners }: PartnersCarouselProps) {
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-bold mb-4 text-primary">{title}</h2>
+      <h2 className="text-2xl font-bold mb-4 text-gray-800 bg-gray-100 px-4 py-2 rounded">
+        {title}
+      </h2>
       <Carousel
         opts={{
           align: 'start',
@@ -37,16 +39,17 @@ export function PartnersCarousel({ title, partners }: PartnersCarouselProps) {
                 <Card className="hover:shadow-md transition-shadow">
                   <CardContent className="flex aspect-video items-center justify-center p-6 flex-col gap-4">
                     <div className="relative w-24 h-24">
-                       <Image
+                      <Image
                         src={partner.logoUrl}
                         alt={`${partner.name} logo`}
                         fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-contain"
-                        data-ai-hint={partner.hint}
+                        data-ai-hint={partner.hint ?? ''}
                       />
                     </div>
-                    <span className="text-lg font-semibold text-center">{partner.name}</span>
+                    <span className="text-lg font-semibold text-center text-gray-700">
+                      {partner.name}
+                    </span>
                   </CardContent>
                 </Card>
               </div>
