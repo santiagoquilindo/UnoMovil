@@ -6,7 +6,7 @@ import { WhatsAppButton, WhatsAppIcon } from "@/components/WhatsAppButton";
 const serviceAllies = [
   {
     name: "Domi 3",
-    logoUrl: "/public/domi3.png",
+    logoUrl: "/domi3.png",
     hint: "supermarket logo",
   },
   {
@@ -16,7 +16,7 @@ const serviceAllies = [
   },
   {
     name: "pizzetas",
-    logoUrl: "/public/pizza.png",
+    logoUrl: "/pizza.png",
     hint: "groceries logo",
   },
   {
