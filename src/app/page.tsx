@@ -5,17 +5,17 @@ import { WhatsAppButton, WhatsAppIcon } from "@/components/WhatsAppButton";
 
 const serviceAllies = [
   {
-    name: "Super Éxito",
+    name: "Domi 3",
     logoUrl: "https://placehold.co/100x100.png",
     hint: "supermarket logo",
   },
   {
-    name: "Drogas La Rebaja",
-    logoUrl: "https://placehold.co/100x100.png",
+    name: "Mauro Autos",
+    logoUrl: "/img/mauroautos.jpg",
     hint: "pharmacy logo",
   },
   {
-    name: "La Cesta Campesina",
+    name: "La Placita Campesina",
     logoUrl: "https://placehold.co/100x100.png",
     hint: "groceries logo",
   },
