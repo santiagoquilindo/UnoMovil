@@ -11,7 +11,7 @@ const serviceAllies = [
   },
   {
     name: "Mauro Autos",
-    logoUrl: "/img/mauroautos.png",
+    logoUrl: "/mauroautos.png",
     hint: "pharmacy logo",
   },
   {
