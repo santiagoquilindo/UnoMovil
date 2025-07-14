@@ -6,7 +6,7 @@ import { WhatsAppButton, WhatsAppIcon } from "@/components/WhatsAppButton";
 const serviceAllies = [
   {
     name: "Domi 3",
-    logoUrl: "/domi3.png",
+    logoUrl: "domi3.png",
     hint: "supermarket logo",
   },
   {
@@ -16,7 +16,7 @@ const serviceAllies = [
   },
   {
     name: "pizzetas",
-    logoUrl: "/pizza.png",
+    logoUrl: "pizza.png",
     hint: "groceries logo",
   },
   {
@@ -26,7 +26,7 @@ const serviceAllies = [
   },
   {
     name: "Ferretería El Tornillo",
-    logoUrl: "https://placehold.co/100x100.png",
+    logoUrl: "ferreteria.png",
     hint: "hardware store",
   },
 ];
@@ -61,7 +61,7 @@ export default function Home() {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#1877F2] transition-colors"
+              className="hover:text-[#393A3BFF] transition-colors"
             >
               <Facebook className="h-6 w-6" />
               <span className="sr-only">Facebook</span>
