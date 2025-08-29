@@ -9,9 +9,11 @@ export const VideoBackground = () => {
             loop
             muted
             playsInline
+            poster="/uno_movil.png"  // opcional, puedes quitarlo si no quieres imagen de espera
+            className="absolute inset-0 w-full h-full object-cover -z-10"
         >
-            <source src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
+            <source src="/fondo.mp4" type="video/mp4" />
+            Tu navegador no soporta el video.
         </video>
     );
 };
