@@ -70,7 +70,7 @@ export default function Home() {
               <span className="sr-only">Twitter</span>
             </a>
             <a
-              href="https://wa.me/573104503898"
+              href="https://wa.me/573006503800"
               className="fixed bottom-4 right-4 w-16 h-16 z-50 rounded-full shadow-lg transition-transform hover:scale-110"
               title="Chatea por WhatsApp"
             >

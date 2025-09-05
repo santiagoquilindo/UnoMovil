@@ -27,7 +27,7 @@ export function WhatsAppButton() {
       className="fixed bottom-6 right-6 h-16 w-16 rounded-full bg-green-500 hover:bg-green-600 shadow-lg z-50 transition-transform hover:scale-110"
       aria-label="Contactar por WhatsApp"
     >
-      <a href="https://wa.me/573104503898" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/573006503800" target="_blank" rel="noopener noreferrer">
         <WhatsAppIcon />
       </a>
     </Button>

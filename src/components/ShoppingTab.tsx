@@ -32,8 +32,8 @@ export function ShoppingTab() {
     if (preferences) {
       message += `\n\n*Preferencias:* ${preferences}`;
     }
-    
-    const whatsappUrl = `https://wa.me/573104503898?text=${encodeURIComponent(message)}`;
+
+    const whatsappUrl = `https://wa.me/573006503800?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   }
 
